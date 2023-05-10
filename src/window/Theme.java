@@ -3,10 +3,10 @@ package window;
 import java.awt.Color;
 
 public enum Theme {
-    BACKGROUND(20,20,20),
-    ACCENT(198,20,20),
-    PRIMARY(90,30,12),
-    SECONDARY(30,90,12);
+    BACKGROUND(13,9,10),
+    ACCENT(251,97,7),
+    PRIMARY(246,241,209),
+    SECONDARY(202,5,77);
 
     private Color color;
 

@@ -20,9 +20,13 @@ public class StateManager {
             System.out.println("[STATE MANAGER] | State is set to: menu");
 
         } else if (currentGameState.equals(GameState.GAME)) {
+
             System.out.println("[STATE MANAGER] | State is set to: game");
+
         } else {
+            
             System.err.println("[ERROR] [REFRESH STATE] | Unknown game state");
+        
         }
     }
 
