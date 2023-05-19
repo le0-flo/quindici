@@ -2,13 +2,14 @@ package states;
 
 import java.awt.Container;
 
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.SwingConstants;
 
 import window.Fonts;
+import window.MainFrame;
 import window.Theme;
 
 public class Menu {
@@ -23,6 +24,8 @@ public class Menu {
         
         mainMenuPanel = new JPanel();
         mainMenuPanel.setBackground(Theme.BACKGROUND.getColor());
+        mainMenuPanel.setPreferredSize(MainFrame.getWindowSize());
+        mainMenuPanel.setLayout(new BoxLayout(mainMenuPanel, BoxLayout.PAGE_AXIS));
 
         menuTitle = new JLabel();
         menuTitle.setText("Quindici");
@@ -47,7 +50,7 @@ public class Menu {
         buttonRow.add(startButton);
         buttonRow.add(exitButton);
 
-        mainMenuPanel.add(menuTitle, SwingConstants.CENTER);
+        mainMenuPanel.add(menuTitle);
         mainMenuPanel.add(buttonRow);
 
         c.add(mainMenuPanel);

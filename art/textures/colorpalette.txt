@@ -1,0 +1,7 @@
+Background color palette:
+
+#d4a373
+#faedcd
+#fefae0
+#e9edc9
+#ccd5ae
