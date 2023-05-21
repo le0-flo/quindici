@@ -3,7 +3,6 @@ package it.aldini.quindici.gui;
 import javax.swing.JFrame;
 
 import it.aldini.quindici.game.GameLogic;
-import it.aldini.quindici.listeners.MenuListener;
 
 import java.awt.*;
 

@@ -20,14 +20,7 @@ public class MenuListener implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("reset")) {
-            numberList = gameLogic.generate();
-            Integer k = 0;
-            for (int i = 0; i < 4; i++) {
-                for (int j = 0; j < 4; j++) {
-                    gamePanel.refreshTiles(i, j, Integer.toString(numberList[k]));
-                    k++;
-                }
-            }
+            scramble();
         } else {
             System.out.println("[ERRORE] Azione non riconosciuta");
         }
