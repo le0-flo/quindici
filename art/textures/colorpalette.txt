@@ -5,3 +5,7 @@ Background color palette:
 #fefae0
 #e9edc9
 #ccd5ae
+
+Colori aggiunti:
+
+#59A373
