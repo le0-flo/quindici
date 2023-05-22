@@ -18,7 +18,7 @@ public class MainFrame extends JFrame{
     public MainFrame() {
         super(windowName);
 
-        this.gameLogic = new GameLogic(); 
+        gameLogic = new GameLogic(); 
 
         container = this.getContentPane();
         gamePanel = new GamePanel(gameLogic);

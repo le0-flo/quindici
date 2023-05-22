@@ -3,6 +3,7 @@ package it.aldini.quindici.gui;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import it.aldini.quindici.game.GameLogic;
@@ -45,7 +46,7 @@ public class GamePanel extends JPanel {
         }
     }
     
-    public void refreshTiles(Integer i, Integer j, String text) {
+    private void refreshTile(Integer i, Integer j, String text) {
         tiles[i][j].setText(text.equals("0") ? "" : text);
 
         if (text.equals("0")) {
@@ -56,5 +57,19 @@ public class GamePanel extends JPanel {
         }
 
         tiles[i][j].setActionCommand(text);
+    }
+
+    public void updateTiles(Integer[] numberList) {
+        Integer k = 0;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                refreshTile(i, j, Integer.toString(numberList[k]));
+                k++;
+            }
+        }
+    }
+
+    public void showWin() {
+        JOptionPane.showMessageDialog(this, "Hai vinto!", "Vittoria!", JOptionPane.INFORMATION_MESSAGE);
     }
 }

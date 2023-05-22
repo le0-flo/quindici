@@ -1,5 +1,6 @@
 package it.aldini.quindici.game;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class GameLogic {
@@ -14,7 +15,7 @@ public class GameLogic {
         }
     }
 
-    public Integer[] generate() {
+    public Integer[] generateRandomTiles() {
         Integer n, counter;
         Boolean check1;
         Random random = new Random();
@@ -52,7 +53,7 @@ public class GameLogic {
         return numberList;
     }
 
-    public Integer[] analyze(Integer index) {
+    public Integer[] swapTile(Integer index) {
         for (int i = 0; i < 16; i++) {
             if (numberList[i] == index) {
                 index = i;
@@ -93,5 +94,10 @@ public class GameLogic {
         catch (IndexOutOfBoundsException erroreInput) {}
         
         return numberList;
+    }
+
+    public Boolean checkWin(Integer[] numberList) {
+        if (Arrays.equals(numberList, new Integer[]{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0})) return true;
+        else return false;
     }
 }

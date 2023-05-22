@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import it.aldini.quindici.game.GameLogic;
 import it.aldini.quindici.gui.GamePanel;
 
-public class MenuListener implements ActionListener{
+public class MenuListener implements ActionListener {
     private final GamePanel gamePanel;
     private final GameLogic gameLogic;
     private Integer[] numberList;
@@ -14,7 +14,7 @@ public class MenuListener implements ActionListener{
     public MenuListener(GameLogic gameLogic, GamePanel gamePanel) {
         this.gameLogic = gameLogic;
         this.gamePanel = gamePanel;
-        numberList = new Integer[16];
+        this.numberList = new Integer[16];
     }
 
     @Override
@@ -27,13 +27,8 @@ public class MenuListener implements ActionListener{
     }
 
     public void scramble() {
-        numberList = gameLogic.generate();
-        Integer k = 0;
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                gamePanel.refreshTiles(i, j, Integer.toString(numberList[k]));
-                k++;
-            }
-        }
+        numberList = gameLogic.generateRandomTiles();
+
+        gamePanel.updateTiles(numberList);
     }
 }
